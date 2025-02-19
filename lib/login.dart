@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mascare_admin/SideBar/home_main.dart';
+import 'package:mascare_admin/colors.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -18,7 +20,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final width =MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: backgroundColor,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +42,7 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 30,
             ),
-            const Text('data'),
+            const Text('Login'),
             const SizedBox(
               height: 20,
             ),
@@ -148,27 +150,32 @@ class _LoginState extends State<Login> {
                     ? 300
                     : 700,
                 ),
-                Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        blurRadius: 2,
-                      ),
-                    ],
-                  ),
-                  child: isLoading
-                      ? Center(
-                    child: CircularProgressIndicator(
-                      color: Colors.red,
-                      // valueColor: AlwaysStoppedAnimation<Color>(primaryColorKom),
+                GestureDetector(
+                  onTap: (){
+                    Get.to(HomeMain());
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          blurRadius: 2,
+                        ),
+                      ],
                     ),
-                  )
-                      : Icon(Icons.arrow_forward_ios)
+                    child: isLoading
+                        ? Center(
+                      child: CircularProgressIndicator(
+                        color: Colors.red,
+                        // valueColor: AlwaysStoppedAnimation<Color>(primaryColorKom),
+                      ),
+                    )
+                        : Icon(Icons.arrow_forward_ios)
+                  ),
                 ),
 
               ],

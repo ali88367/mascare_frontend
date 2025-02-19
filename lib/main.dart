@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mascare_admin/SideBar/home_main.dart';
+import 'package:mascare_admin/login.dart';
 
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Admin Panel',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomeMain(),
+      home: Login(),
     );
   }
 }

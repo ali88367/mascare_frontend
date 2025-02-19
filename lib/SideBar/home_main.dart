@@ -6,11 +6,8 @@ import 'package:get/get.dart';
 import 'package:mascare_admin/SideBar/sidebar.dart';
 import 'package:mascare_admin/SideBar/sidebar_controller.dart';
 import 'package:mascare_admin/user_details.dart';
-
 import '../bookings.dart';
 import '../events.dart';
-
-
 
 class HomeMain extends StatefulWidget {
   const HomeMain({super.key});
