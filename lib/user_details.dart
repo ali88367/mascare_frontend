@@ -245,7 +245,7 @@ class _UserDetailsState extends State<UserDetails> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 10, top: 10),
-                  child:SvgPicture.asset('assets/images/drawernavigation.svg',color: primaryColorKom,),
+                  child:Icon(Icons.menu)
                 ))
                 : const SizedBox.shrink(),
             SizedBox(
